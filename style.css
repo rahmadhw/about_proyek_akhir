@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Staatliches&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #DFDFDF;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+  height: 1200px;
+}
+
+
+header {
+  margin: 2em auto;
+  padding: 2em 0;
+  width: 90%;
+  /*height: 80vh;*/
+  background-color: #DFDFDF;
+  box-shadow: 0 0 10px black;
+}
+
+button {
+  width: 300px;
+  height: 40px;
+  background: linear-gradient(to top right, rgba(12, 167, 20, 0.726), rgba(8, 8, 8, 0.8));
+  color: #DFDFDF;
+  border-radius: 10px;
+  border: none;
+}
+
+header::after {
+  position: absolute;
+  content: '';
+  width: 40%;
+  height: 75%;
+  background: #DFDFDF;
+  border-radius: 50%;
+  top: -90px;
+  right: -20px;
+  z-index: 2;
+}
+
+header::before {
+  position: absolute;
+  content: '';
+  width: 35%;
+  height: 75%;
+  background: #DFDFDF;
+  border-radius: 50%;
+  left: -20px;
+  bottom: -190px;
+  z-index: 2;
+}
+
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  margin: 10px auto;
+  z-index: 3;
+}
+
+.title h1 {
+  text-align: center;
+}
+
+
+.container {
+  margin: auto;
+  width: 99%;
+  height: 80vh;
+  /* border: 1px solid black; */
+  z-index: 19;
+}
+
+.container::after {
+  position: absolute;
+  content: '';
+  width: 100vw;
+  transform: skewY(190deg);
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: #006E7F;
+  z-index: -999;
+}
+
+.anggota_kelompok {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  width: 80%;
+  height: 350px;
+  margin: 5px auto;
+  /*height: 100px;*/  
+  z-index: 3;
+}
+
+.anggota_kelompok .anggota-satu {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.anggota_kelompok .anggota-satu img {
+  width: 160px;
+  height: 160px;
+  border-radius:50%; 
+}
+
+section {
+  margin: 120px 0;
+  position: relative;
+  padding: 40px 0;
+  z-index: 12;
+}
+
+.title_section h1 {
+  text-align: center;
+}
+
+.title {
+  position: relative;
+  z-index: 12;
+}
+
+.section-job {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+ 
+}
+
+.gambar-job {
+  width: 400px;
+  height: 400px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px 20px;
+  background-color: #fff
+}
+
+.gambar-job:hover {
+  background-color: #006E7F;
+  transition: ease 1s;
+}
+
+.gambar-job img {
+  width: 100%;
+  height: 400px;
+}
+
+.title_job {
+  width: 50%;
+  height: 100%;
+  background:#fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-top: 30px;
+}
+
+.title_job:hover {
+  background-color: #006E7F;
+  color: #fff;
+  transition: ease 1s;
+}
+
+/*mobile version*/
+
+@media screen and (max-width: 640px){
+  header {
+    /*background-color: black;*/
+    height: 1200px;
+  }
+
+  .anggota_kelompok .anggota-satu{
+    margin-top: 2.3rem ;
+    background-color: black;
+  }
+
+  .title_job {
+    width: 100%;
+  }
+
+}
+
+/*table Version*/
+@media screen and (min-width: 800px)and (max-width: 1024px){
+
+  header {
+    /*background-color: black;*/
+    height: 1180px;
+  }
+
+  .anggota_kelompok .anggota-satu{
+    width: 250px;
+    height: 250px;
+    margin-top: 3rem ;
+  }
+
+  .anggota_kelompok .anggota-satu img{
+    width: 250px;
+    height: 250px;
+  }
+
+  .title_job {
+    width: 100%;
+  }
+
+  .anggota_kelompok {
+    width: 85%;
+  }
+
+
+  .gambar-job {
+    width: 80%;
+    height:600px;
+  }
+
+  .gambar-job img {
+    width: 100%;
+    height: 600px;
+  }
+
+  .title_job {
+    font-size: 30px;
+  }
+}
